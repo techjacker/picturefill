@@ -59,5 +59,7 @@ module.exports = function (w) {
 		w.attachEvent( "onload", w.picturefill );
 	}
 
+	return picturefill;
+
 };
 // }( this ));
