@@ -1,6 +1,7 @@
 /*! Picturefill - Responsive Images that work today. (and mimic the proposed Picture element with span elements). Author: Scott Jehl, Filament Group, 2012 | License: MIT/GPLv2 */
 
-(function( w ){
+module.exports = function (w) {
+// (function( w ){
 
 	// Enable strict mode
 	"use strict";
@@ -18,7 +19,7 @@
 				// See if which sources match
 				for( var j = 0, jl = sources.length; j < jl; j++ ){
 					var media = sources[ j ].getAttribute( "data-media" );
-					// if there's no media specified, OR w.matchMedia is supported 
+					// if there's no media specified, OR w.matchMedia is supported
 					if( !media || ( w.matchMedia && w.matchMedia( media ).matches ) ){
 						matches.push( sources[ j ] );
 					}
@@ -58,4 +59,5 @@
 		w.attachEvent( "onload", w.picturefill );
 	}
 
-}( this ));
+};
+// }( this ));
