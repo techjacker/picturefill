@@ -1,5 +1,8 @@
 /*! Picturefill - Responsive Images that work today. (and mimic the proposed Picture element with span elements). Author: Scott Jehl, Filament Group, 2012 | License: MIT/GPLv2 */
 
+
+require('matchMedia');
+
 module.exports = function (w) {
 // (function( w ){
 
