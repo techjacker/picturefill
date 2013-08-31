@@ -2,7 +2,6 @@
 
 
 var addMatchMediaSupport = require('matchMedia');
-console.log("addMatchMediaSupport", addMatchMediaSupport);
 addMatchMediaSupport();
 
 module.exports = function (w) {
