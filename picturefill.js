@@ -11,6 +11,7 @@ module.exports = function (w) {
 	"use strict";
 
 	w.picturefill = function() {
+
 		var ps = w.document.getElementsByTagName( "span" );
 
 		// Loop the pictures
@@ -63,7 +64,13 @@ module.exports = function (w) {
 		w.attachEvent( "onload", w.picturefill );
 	}
 
-	return picturefill;
+
+	return function() {
+		window.setTimeout(function() {
+			w.picturefill();
+		}, 50);
+	};
+	// return w.picturefill;
 
 };
 // }( this ));
