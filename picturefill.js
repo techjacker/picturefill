@@ -11,6 +11,7 @@ module.exports = function (w) {
 	"use strict";
 
 	w.picturefill = function() {
+		addMatchMediaSupport();
 		var ps = w.document.getElementsByTagName( "span" );
 
 		// Loop the pictures
@@ -63,7 +64,7 @@ module.exports = function (w) {
 		w.attachEvent( "onload", w.picturefill );
 	}
 
-	return picturefill;
+	return w.picturefill;
 
 };
 // }( this ));
